@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import KaushanFont from './kaushan-script/KaushanScript-Regular.otf';
+import logo from './logo.png'
 
 function App() {
   const [selected, setSelected] = useState(null);
@@ -46,21 +46,37 @@ function App() {
         <div className="content">
           <div className="left-box">
             <div className='name'>
-              <span className='l1'>Hong</span> 
-              <span className='l2'>Kong</span>
+              <span className='nl1'>Hong</span> 
+              <span className='nl2'>Kong</span>
             </div>
-            <p>LOGO HERE</p>
+            <img src={logo} alt="Logo" className="logo" />
+            <div className='addr'>
+              <span className='al1'>1523 E. Markland Ave</span>
+              <span className='al2'>Kokomo, IN 46901</span>
+            </div>
+            <div className='phone'>
+              <span className='num1'>765-457-1919</span>
+              <span className='num2'>765-457-1188</span>
+            </div>
+            <div className='hours'>
+              <span className='hrtxt'>Hours</span>
+              <span className='days'>Sunday: 11:30am - 9:30pm</span>
+              <span className='days'>Monday: Closed</span>
+              <span className='days'>Tuesday: 10:30am - 9:30pm</span>
+              <span className='days'>Wednesday: 10:30am - 9:30pm</span>
+              <span className='days'>Thursday: 10:30am - 9:30pm</span>
+              <span className='days'>Friday: 10:30am - 9:30pm</span>
+              <span className='days'>Saturday: 10:30am - 9:30pm</span>
+            </div>
           </div>
           <div className="right-menu">
             <div className={`selected-menu ${selected ? 'show' : ''}`}>
               {selected === 'Lunch' ? (
                 <div>
-                  <h3>Lunch Menu</h3>
                   <p>Here is the lunch menu.</p>
                 </div>
               ) : (
                 <div>
-                  <h3>Dinner Menu</h3>
                   <p>Here is the dinner menu.</p>
                 </div>
               )}

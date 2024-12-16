@@ -5,13 +5,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Caviar';
+  src: url('./Caviar-Dreams/CaviarDreams.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
-  font-family: 'Kaushan', sans-serif; /* Fallback to sans-serif if Kaushan fails to load */
 }
 
 .App-header {
-  background-color: #ffffff;
+  background-color: #fefae0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +45,7 @@
   padding: 10px 20px;
   background-color: transparent;
   border: none;
-  font-family: 'Kaushan', sans-serif;
+  font-family: 'Caviar', sans-serif;
   font-weight: bold;
   border-radius: 4px;
   color: #b0b0b0;
@@ -70,7 +76,7 @@
 
 .left-box {
   flex: 1;
-  background-color: #f0f0f0;
+  background-color: transparent;
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
@@ -82,7 +88,7 @@
   margin: 20px;
   margin-top: 80px; /* Add margin-top to move the box down */
   border-radius: 8px;
-  background-color: #b0b0b0;
+  background-color: transparent;
 }
 
 /* Apply smooth transition to menu visibility */
@@ -107,15 +113,75 @@
   line-height: 1;  /* Adjust line height for spacing between lines */
   letter-spacing: 3px;
   margin-left: -75px;
+  font-family: 'Kaushan';
+  text-shadow: 2.5px 2.5px 2px rgb(102, 102, 102);
 }
 
-.l1 {
-  font-size: 64px;
+.nl1 {
+  font-size: 94px;
   display: block; /* Forces "Hong" to be on a new line */
 }
 
-.l2 {
-  font-size: 64px;
+.nl2 {
+  font-size: 94px;
   display: block; /* Forces "Kong" to be on a new line */
   margin-left: 100px; /* Stagger "Kong" slightly to the right */
+}
+
+.logo {
+  width: 200px;  /* Adjust the width */
+  height: auto;
+  margin-top: 30px;
+}
+
+.addr {
+  line-height: 1;  /* Adjust line height for spacing between lines */
+  letter-spacing: 3px;
+  font-family: 'Caviar';
+  margin-top: 10px;
+}
+
+.al1 {
+  display: block;
+}
+
+.al2 {
+  display: block;
+  margin-top: 5px;
+}
+
+.phone {
+  line-height: 1;  /* Adjust line height for spacing between lines */
+  letter-spacing: 3px;
+  font-family: 'Caviar';
+  margin-top: 20px;
+}
+
+.num1 {
+  display: block;
+}
+
+.num2 {
+  display: block;
+  margin-top: 5px;
+}
+
+.hours {
+  line-height: 1;  /* Adjust line height for spacing between lines */
+
+  font-family: 'Caviar';
+  margin-top: 20px;
+}
+
+.hrtxt {
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.days {
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 0px;
 }
