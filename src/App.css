@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'test';
+  src: url('./baratheon-font/Baratheon-9Y1Z5.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -76,7 +83,7 @@
 
 .left-box {
   flex: 1;
-  background-color: transparent;
+  background-color: grey;
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
@@ -88,7 +95,7 @@
   margin: 20px;
   margin-top: 80px; /* Add margin-top to move the box down */
   border-radius: 8px;
-  background-color: transparent;
+  background-color: grey;
 }
 
 /* Apply smooth transition to menu visibility */
@@ -110,11 +117,11 @@
 }
 
 .name {
-  line-height: 1;  /* Adjust line height for spacing between lines */
+  line-height: .85;  /* Adjust line height for spacing between lines */
   letter-spacing: 3px;
-  margin-left: -75px;
-  font-family: 'Kaushan';
-  text-shadow: 2.5px 2.5px 2px rgb(102, 102, 102);
+  margin-left: -45px;
+  font-family: 'test', sans-serif;
+
 }
 
 .nl1 {
