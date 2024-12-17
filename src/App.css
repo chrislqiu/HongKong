@@ -1,11 +1,4 @@
 @font-face {
-  font-family: 'Kaushan';
-  src: url('./kaushan-script/KaushanScript-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Caviar';
   src: url('./Caviar-Dreams/CaviarDreams.ttf') format('truetype');
   font-weight: normal;
@@ -13,7 +6,7 @@
 }
 
 @font-face {
-  font-family: 'test';
+  font-family: 'Baratheon';
   src: url('./baratheon-font/Baratheon-9Y1Z5.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
@@ -92,8 +85,9 @@
 .right-menu {
   flex: 2;
   padding: 20px;
-  margin: 20px;
-  margin-top: 80px; /* Add margin-top to move the box down */
+  margin: 20px; /* Top, Right, Bottom, Left */
+  margin-left: 3px; /* Adjust this value to move it left */
+  margin-top: 80px;
   border-radius: 8px;
   background-color: grey;
 }
@@ -120,8 +114,7 @@
   line-height: .85;  /* Adjust line height for spacing between lines */
   letter-spacing: 3px;
   margin-left: -45px;
-  font-family: 'test', sans-serif;
-
+  font-family: 'Baratheon', sans-serif;
 }
 
 .nl1 {
@@ -191,4 +184,11 @@
   display: block;
   margin-top: 10px;
   letter-spacing: 0px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
 }
