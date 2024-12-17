@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import FAQ from './Faq';
 import logo from './logo.png'
 
 function App() {
   const [selected, setSelected] = useState(null);
+  const faqData = [
+    { question: "What is the difference between the chow mein, lo mein, and chow mei fun?", answer: "The chow mein is a vegetable dish, the lo mein is soft noodles with brown sauce, and the chow mei fun is the thin rice noodles."},
+    { question: "What is the difference between the large and combination sizes?", answer: "Large sizes comes with more entree than the combination and a small side of white rice. The combination is half pork fried rice, half entree, and comes with a side of eggroll." },
+    { question: "Do you offer delivery?", answer: "No, unfortunately we do not offer delivery anymore." },
+    { question: "Can you substitute certain items in a meal for another item?", answer: "Yes, typically most people tend to do substitution in our combinations meals. Some people prefer spring rolls or crab rangoon over pork eggrolls, and we are happy to accommodate that." },
+    { question: "Can we modify the dishes to fit our preferences?", answer: "Yes, for the most part, we are able to modify each dish to each individuals' liking. This includes more/less spice, sauce, vegetables, protein, etc and how much more/less of a certain ingredient. For some dishes, we are also able to substitute white rice for fried rice or lo mein noodles and vice versa. With that being said, this could come at an extra cost depending on what the change is." },
+    { question: "If I do not like a certain item, do I have to keep it in my order?", answer: "No, if there are items that come with the meal, you can ask us not to include them. This includes, but is not limited to, white rice, egg rolls, and sauces."},
+    { question: "What payments do you take and can you take it over the phone?", answer: "We accept cash, and cards. We take Visa, MasterCard, Discover, and Apple Pay. We DO NOT accept card payments over the phone, due to credit card frauds in the past."}
+  ];
 
   useEffect(() => {
     // Get the current hour and minute
@@ -83,6 +93,7 @@ function App() {
             </div>
           </div>
         </div>
+        <FAQ data={faqData} />
       </header>
     </div>
   );
