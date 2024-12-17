@@ -76,7 +76,7 @@
 
 .left-box {
   flex: 1;
-  background-color: grey;
+  background-color: transparent;
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
@@ -86,19 +86,19 @@
   flex: 2;
   padding: 20px;
   margin: 20px; /* Top, Right, Bottom, Left */
-  margin-left: 3px; /* Adjust this value to move it left */
-  margin-top: 80px;
   border-radius: 8px;
-  background-color: grey;
+  background-color: transparent;
+  overflow: visible; /* Ensures content is not clipped */
 }
 
+
 /* Apply smooth transition to menu visibility */
-.selected-menu {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
+.selected-menu.show {
+  opacity: 1;
+  max-height: none; /* Remove height restriction */
+  transition: opacity 0.5s ease;
 }
+
 
 .selected-menu.show {
   opacity: 1;
@@ -129,9 +129,9 @@
 }
 
 .logo {
-  width: 200px;  /* Adjust the width */
+  width: 300px;  /* Adjust the width */
   height: auto;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .addr {
@@ -184,6 +184,18 @@
   display: block;
   margin-top: 10px;
   letter-spacing: 0px;
+}
+
+.menu {
+  width: 100%; /* Allow the image to scale based on container width */
+  max-width: 900px; /* Prevent it from exceeding a specific width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures it does not overflow inline space */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.dinner-menu {
+  margin-top: 100px; /* Adjust this value for the desired vertical offset */
 }
 
 body, html {
