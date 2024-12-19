@@ -4,6 +4,7 @@ import FAQ from './Faq';
 import logo from './logo.png'
 import M1e from './M1e.png'
 import M2 from './M2.png'
+import DinMenu from './DinMenu';
 
 function App() {
   const [selected, setSelected] = useState(null);
@@ -89,7 +90,7 @@ function App() {
                 </div>
               ) : (
                 <div>
-                  <img src={M1e} alt="DinnerMenu" className="menu dinner-menu" />
+                  <DinMenu/>
                 </div>
               )}
             </div>

@@ -1,0 +1,53 @@
+.menu-container {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap to the next line if needed */
+    gap: 10px; /* Adds space between items */
+  }
+  
+  .menu-category {
+    display: flex;
+    flex-direction: column;
+    width: 150px; /* Smaller category width */
+    margin-right: 10px; /* Adds space between categories */
+  }
+  
+  .category-title {
+    font-size: 14px; /* Smaller font size */
+    font-family: 'Caviar', sans-serif;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item-name {
+    font-family: 'Caviar', sans-serif;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%; /* Ensures item name takes up most space */
+  }
+  
+  .item-price {
+    font-family: 'Caviar', sans-serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+    width: 20%; /* Ensures price takes up remaining space */
+  }
+  
