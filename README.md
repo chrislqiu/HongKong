@@ -1,5 +1,6 @@
 # HongKong
 Website for family-owned restaurant.
 ## Future Plans
-* Remove menu images, and manually type in and format each item
-* Allow easier visibility on mobile without having to use landscape orientation
+* Type in lunch menu, formatting for lunch is kinda cooked
+## Known Issues (Kinda)
+* Formatting on mobile looks a little silly...but is fully functional
