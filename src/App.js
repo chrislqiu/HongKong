@@ -4,17 +4,18 @@ import FAQ from './Faq';
 import logo from './logo.png'
 import M2 from './M2.png'
 import DinMenu from './DinMenu';
+import LunMenu from './LunMenu'
 
 function App() {
   const [selected, setSelected] = useState(null);
   const faqData = [
-    { question: "What is the difference between the chow mein, lo mein, and chow mei fun?", answer: "The chow mein is a vegetable dish, the lo mein is soft noodles with brown sauce, and the chow mei fun is the thin rice noodles."},
+    { question: "What is the difference between the chow mein, lo mein, and chow mei fun?", answer: "The chow mein is a vegetable dish, the lo mein is soft noodles with brown sauce, and the chow mei fun is the thin rice noodles." },
     { question: "What is the difference between the large and combination sizes?", answer: "Large sizes comes with more entree than the combination and a small side of white rice. The combination is half pork fried rice, half entree, and comes with a side of eggroll." },
     { question: "Do you offer delivery?", answer: "No, unfortunately we do not offer delivery anymore." },
     { question: "Can you substitute certain items in a meal for another item?", answer: "Yes, typically most people tend to do substitution in our combinations meals. Some people prefer spring rolls or crab rangoon over pork eggrolls, and we are happy to accommodate that." },
     { question: "Can we modify the dishes to fit our preferences?", answer: "Yes, we can usually modify each dish to individual preferences. This includes adjusting the amount of spice, sauce, vegetables, protein, and other ingredients. For some dishes, we can also substitute white rice with fried rice or lo mein noodles, and vice versa. Please note that some modifications may incur an additional charge." },
-    { question: "If I do not like a certain item, do I have to keep it in my order?", answer: "No, if there are items that come with the meal, you can ask us not to include them. This includes, but is not limited to, white rice, egg rolls, and sauces."},
-    { question: "What payments do you take and can you take it over the phone?", answer: "We accept cash, and cards. We take Visa, MasterCard, Discover, and Apple Pay. We DO NOT accept card payments over the phone, due to credit card frauds in the past."}
+    { question: "If I do not like a certain item, do I have to keep it in my order?", answer: "No, if there are items that come with the meal, you can ask us not to include them. This includes, but is not limited to, white rice, egg rolls, and sauces." },
+    { question: "What payments do you take and can you take it over the phone?", answer: "We accept cash, and cards. We take Visa, MasterCard, Discover, and Apple Pay. We DO NOT accept card payments over the phone, due to credit card frauds in the past." }
   ];
 
   useEffect(() => {
@@ -58,7 +59,7 @@ function App() {
         <div className="content">
           <div className="left-box">
             <div className='name'>
-              <span className='nl1'>Hong</span> 
+              <span className='nl1'>Hong</span>
               <span className='nl2'>Kong</span>
             </div>
             <img src={logo} alt="Logo" className="logo" />
@@ -85,7 +86,7 @@ function App() {
             <div className={`selected-menu ${selected ? 'show' : ''}`}>
               {selected === 'Lunch' ? (
                 <div>
-                  <img src={M2} alt="LunchMenu" className="menu" />
+                  <LunMenu/>
                 </div>
               ) : (
                 <div>

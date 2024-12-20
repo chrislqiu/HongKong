@@ -32,12 +32,17 @@
   background-color: transparent;
   color: black;
   display: flex;
-  justify-content: flex-end;  /* Align buttons to the right */
+  justify-content: flex-end;
+  /* Align buttons to the right */
   padding-right: 20px;
-  position: fixed;  /* Fix the toolbar to the right */
-  right: 0;  /* Align to the right side */
-  top: 10px;  /* Align to the top of the screen */
-  z-index: 10;  /* Ensure the toolbar stays above other content */
+  position: fixed;
+  /* Fix the toolbar to the right */
+  right: 0;
+  /* Align to the right side */
+  top: 10px;
+  /* Align to the top of the screen */
+  z-index: 10;
+  /* Ensure the toolbar stays above other content */
 }
 
 .toolbar-button {
@@ -70,7 +75,8 @@
   display: flex;
   width: 100%;
   margin-top: 20px;
-  padding-right: 15%; /* Adjust content to prevent it from going under the fixed toolbar */
+  padding-right: 15%;
+  /* Adjust content to prevent it from going under the fixed toolbar */
 }
 
 .left-box {
@@ -84,25 +90,29 @@
 .right-menu {
   flex: 3;
   padding: 0px;
-  margin: 10px; /* Top, Right, Bottom, Left */
+  margin: 10px;
+  /* Top, Right, Bottom, Left */
   margin-left: 0px;
   border-radius: 8px;
   background-color: transparent;
-  overflow: visible; /* Ensures content is not clipped */
+  overflow: visible;
+  /* Ensures content is not clipped */
 }
 
 
 /* Apply smooth transition to menu visibility */
 .selected-menu.show {
   opacity: 1;
-  max-height: none; /* Remove height restriction */
+  max-height: none;
+  /* Remove height restriction */
   transition: opacity 0.5s ease;
 }
 
 
 .selected-menu.show {
   opacity: 1;
-  max-height: 500px; /* or set a max height large enough to accommodate your menu content */
+  max-height: 500px;
+  /* or set a max height large enough to accommodate your menu content */
 }
 
 .selected-menu h3 {
@@ -111,7 +121,8 @@
 }
 
 .name {
-  line-height: .85;  /* Adjust line height for spacing between lines */
+  line-height: .85;
+  /* Adjust line height for spacing between lines */
   letter-spacing: 3px;
   margin-left: -45px;
   font-family: 'Baratheon', sans-serif;
@@ -119,23 +130,28 @@
 
 .nl1 {
   font-size: 94px;
-  display: block; /* Forces "Hong" to be on a new line */
+  display: block;
+  /* Forces "Hong" to be on a new line */
 }
 
 .nl2 {
   font-size: 94px;
-  display: block; /* Forces "Kong" to be on a new line */
-  margin-left: 100px; /* Stagger "Kong" slightly to the right */
+  display: block;
+  /* Forces "Kong" to be on a new line */
+  margin-left: 100px;
+  /* Stagger "Kong" slightly to the right */
 }
 
 .logo {
-  width: 300px;  /* Adjust the width */
+  width: 300px;
+  /* Adjust the width */
   height: auto;
   margin-top: 0px;
 }
 
 .addr {
-  line-height: 1;  /* Adjust line height for spacing between lines */
+  line-height: 1;
+  /* Adjust line height for spacing between lines */
   letter-spacing: 3px;
   font-family: 'Caviar';
   margin-top: 10px;
@@ -151,7 +167,8 @@
 }
 
 .phone {
-  line-height: 1;  /* Adjust line height for spacing between lines */
+  line-height: 1;
+  /* Adjust line height for spacing between lines */
   letter-spacing: 3px;
   font-family: 'Caviar';
   margin-top: 20px;
@@ -167,7 +184,8 @@
 }
 
 .hours {
-  line-height: 1;  /* Adjust line height for spacing between lines */
+  line-height: 1;
+  /* Adjust line height for spacing between lines */
 
   font-family: 'Caviar';
   margin-top: 20px;
@@ -187,12 +205,14 @@
 }
 
 .menu {
-  width: 100%; /* Allow the image to scale based on container width */
-  max-width: 900px; /* Prevent it from exceeding a specific width */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensures it does not overflow inline space */
-  margin: 0 auto; /* Centers the image horizontally */
+  width: 100%;
+  /* Allow the image to scale based on container width */
+  max-width: 900px;
+  /* Prevent it from exceeding a specific width */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Ensures it does not overflow inline space */
+  margin: 0 auto;
+  /* Centers the image horizontally */
 }
-
-
-

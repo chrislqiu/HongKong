@@ -5,7 +5,8 @@
     font-size: 10px;
     width: 250px;
     background-color: transparent;
-  }
+}
+
 .col2 {
     margin-top: -791px;
     margin-left: 265px;
@@ -18,9 +19,9 @@
 }
 
 .col3 {
-background-color: transparent;
-margin-top: -843px;
-margin-left: 265px;
+    background-color: transparent;
+    margin-top: -843px;
+    margin-left: 265px;
     display: block;
     padding: 0px;
     font-family: 'Caviar';
@@ -29,7 +30,7 @@ margin-left: 265px;
 }
 
 .col4 {
-    background-color:transparent;
+    background-color: transparent;
     margin-top: -809px;
     margin-left: 525px;
     display: block;
@@ -37,53 +38,60 @@ margin-left: 265px;
     font-family: 'Caviar';
     font-size: 10px;
     width: 210px;
-}  
-    h2 {
+}
+
+h2 {
     text-align: center;
     margin-bottom: 2px;
-  }
-  
-   p {
+}
+
+p {
     margin: 5px 0;
     text-align: left;
     line-height: 8px;
-    display: flex; /* Use flexbox to align items horizontally */
-    justify-content: space-between; /* Space out the name and price */
-  }
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    justify-content: space-between;
+    /* Space out the name and price */
+}
 
 
-  .menu-item { /* Styles for the wrapper div */
-    margin-bottom: 15px; /* Add spacing between menu items */
-  }
-  
-  .item-name-price {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2px; /* Space between name/price and description */
-      text-align: left;
-  }
-  
-  .item-price {
+.menu-item {
+    /* Styles for the wrapper div */
+    margin-bottom: 15px;
+    /* Add spacing between menu items */
+}
+
+.item-name-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    /* Space between name/price and description */
+    text-align: left;
+}
+
+.item-price {
     text-align: right;
     margin-left: 3px;
     letter-spacing: .1px;
-  }
-  
-  .desc {
+}
+
+.desc {
     /* Removed display: block; it's block by default */
-    margin-top: 3px; /* Consistent spacing */
+    margin-top: 3px;
+    /* Consistent spacing */
     word-wrap: break-word;
     font-size: 8px;
     text-align: left;
     font-style: italic;
-  }
+}
 
-  .spicy-text {
+.spicy-text {
     color: red;
-  }
+}
 
-  .comment {
+.comment {
     text-align: right;
     font-size: 8px;
     color: red;
-  }
+}

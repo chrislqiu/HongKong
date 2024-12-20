@@ -1,0 +1,79 @@
+.c1 {
+    display: block;
+    padding: 20px;
+    font-family: 'Caviar';
+    font-size: 15px;
+    width: 330px;
+    background-color: transparent;
+}
+
+.c2 {
+    margin-top: -692px;
+    margin-left: 360px;
+    display: block;
+    padding: 20px;
+    font-family: 'Caviar';
+    font-size: 15px;
+    width: 280px;
+    background-color: transparent;
+}
+
+.c3 {
+    margin-left: 670px;
+    margin-top: -510px;
+    padding: 20px;
+    width: 290px;
+}
+
+h1 {
+    font-family: 'Caviar';
+    color: red;
+    font-weight: bold;
+}
+
+.h22 {
+    text-align: center;
+    margin-bottom: 2px;
+    font-family: 'Caviar';
+}
+
+.p2 {
+    margin: 7px 0;
+    text-align: left;
+    line-height: 14px;
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    justify-content: space-between;
+    /* Space out the name and price */
+    font-family: 'Caviar';
+}
+
+
+.menu-item {
+    /* Styles for the wrapper div */
+    margin-bottom: 15px;
+    /* Add spacing between menu items */
+}
+
+
+.item-price {
+    text-align: right;
+    margin-left: 3px;
+    letter-spacing: .1px;
+}
+
+.spicy-text {
+    color: red;
+}
+
+.comment2 {
+    text-align: right;
+    font-size: 12px;
+    color: red;
+    font-family: 'Caviar';
+}
+
+.party {
+    margin: 5px;
+    font-family: 'Caviar';
+}
