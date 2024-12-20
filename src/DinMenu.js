@@ -254,24 +254,37 @@ const DinMenu = () => {
     <div className='col1'>
       <div className='appetizer'>
       <h2>Appetizer</h2>
-        {Appetizer && Appetizer.items.map(item => (
-          <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
-        ))}
+      <div className='comment'>
+      &nbsp;
+        </div>
+  {Appetizer && Appetizer.items.map(item => (
+    <p key={item.name}>
+      <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+        {item.id} {item.name}
+      </span>
+      <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+        {item.price}
+      </span>
+    </p>
+  ))}
       </div>
       <div className='soup'>
       <h2>Soup</h2>
+        <div className='comment'>
+        <span>small&nbsp; large</span>
+        </div>
         {Soup && Soup.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.smallp} {item.largep}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.smallp} {item.largep}</span>
+        </p>
         ))}
       </div>
       <div className='friedrice'>
       <h2>Fried Rice</h2>
+      <div className='comment'>
+        <span>small&nbsp; large</span>
+        </div>
         {FR && FR.items.map(item => (
           <p key={item.name}>
             <span className="item-name">{item.id} {item.name}</span>
@@ -281,6 +294,9 @@ const DinMenu = () => {
       </div>
       <div className='lomein'>
       <h2>Lo Mein</h2>
+        <div className='comment'>
+        <span>(Soft Noodle) (No Rice)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small&nbsp; large</span>
+        </div>
         {LM && LM.items.map(item => (
           <p key={item.name}>
             <span className="item-name">{item.id} {item.name}</span>
@@ -290,65 +306,91 @@ const DinMenu = () => {
       </div>
       <div className='eggfooyoung'>
       <h2>Egg Foo Young</h2>
+      <div className='comment'style={{textAlign: 'center'}}>
+      <span>(w/ White Rice)</span>
+        </div>
         {EFY && EFY.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.id} {item.name}
+          </span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.price}
+          </span>
+        </p>
         ))}
       </div>
-      <div className='hotnspicy'>
+      <div className='hotnspicy' style={{color:'red'}}>
       <h2>Hot & Spicy</h2>
+        <h5>We can alter the spice according to your taste</h5>
       </div>
     </div>
     <div className='col2'>
       <div className='beef'>
       <h2>Beef</h2>
+      <div className='comment'>
+        <span>(w/ White Rice)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small&nbsp;&nbsp;  large&nbsp;</span>
+        </div>
         {B && B.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.smallp} {item.largep}</span>
+            <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+            <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.smallp} {item.largep}</span>
           </p>
         ))}
       </div>
       <div className='shrimp'>
       <h2>Shrimp</h2>
+      <div className='comment'>
+        <span>(w/ White Rice)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small&nbsp;&nbsp; large&nbsp;</span>
+        </div>
         {S && S.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.smallp} {item.largep}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.smallp} {item.largep}</span>
+        </p>
         ))}
       </div>
       <div className='chowmein'>
       <h2>Chow Mein</h2>
+      <div className='comment'>
+        <span>(w/ White Rice & Fried Noodles)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small&nbsp;&nbsp; large</span>
+        </div>
         {CM && CM.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.smallp} {item.largep}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.smallp} {item.largep}</span>
+        </p>
         ))}
       </div>
       <div className='chicken'>
       <h2>Chicken</h2>
+      <div className='comment'>
+        <span>(w/ White Rice)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small&nbsp;&nbsp; large&nbsp;</span>
+        </div>
         {C && C.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.smallp} {item.largep}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.smallp} {item.largep}</span>
+        </p>
         ))}
       </div>
       <div className='roastpork'>
       <h2>Roast Pork</h2>
+      <div className='comment'>
+        <span>(w/ White Rice)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small&nbsp;&nbsp; large&nbsp;</span>
+        </div>
         {RP && RP.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.smallp} {item.largep}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.smallp} {item.largep}</span>
+        </p>
         ))}
       </div>
       <div className='sideorder'>
       <h2>Side Order</h2>
+      <div className='comment'>
+        <span>small&nbsp; large</span>
+        </div>
         {SO && SO.items.map(item => (
           <p key={item.name}>
             <span className="item-name">{item.id} {item.name}</span>
@@ -359,58 +401,99 @@ const DinMenu = () => {
       <div className='col3'>
       <div className='vegetable'>
       <h2>Vegetable</h2>
+      <div className='comment' style={{textAlign: 'center'}}>
+        <span>(w/ White Rice)</span>
+        </div>
         {V && V.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.id} {item.name}
+          </span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.price}
+          </span>
+        </p>
         ))}
       </div>
       <div className='meinfun'>
       <h2>Mei Fun</h2>
+      <div className='comment' style={{textAlign: 'center'}}>
+        <span>(Think Noodle, No Rice)</span>
+        </div>
         {MF && MF.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.id} {item.name}
+          </span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.price}
+          </span>
+        </p>
         ))}
       </div>
       <div className='duck'>
       <h2>Duck</h2>
+      <div className='comment' style={{textAlign: 'center'}}>
+        <span>(w/ White Rice, Half Duck)</span>
+        </div>
         {D && D.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.id} {item.name}
+          </span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.price}
+          </span>
+        </p>
         ))}
       </div>
       <div className='dietdishes'>
       <h2>Diet Dishes</h2>
+      <div className='comment' style={{textAlign: 'center', display: 'block'}}>
+        <span>(Steamed w/o Oil & Salt)</span>
+        </div>
+        <div className='comment' style={{textAlign: 'center', display: 'block'}}>
+        <span>(w/ White Rice & Brown Sauce on Side)</span>
+        </div>
         {DD && DD.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.id} {item.name}
+          </span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.price}
+          </span>
+        </p>
         ))}
       </div>
       <div className='combo'>
       <h2>Combination Plates</h2>
+      <div className='comment' style={{textAlign: 'center'}}>
+        <span>(w/ Roast Pork Fried Rice & Egg Roll)</span>
+        </div>
         {CP && CP.items.map(item => (
           <p key={item.name}>
-            <span className="item-name">{item.id} {item.name}</span>
-            <span className="item-price">{item.price}</span>
-          </p>
+          <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.id} {item.name}
+          </span>
+          <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>
+            {item.price}
+          </span>
+        </p>
         ))}
       </div>
       </div>
       <div className='col4'>
       <div className='special'>
       <h2>Our Chef's Suggestions</h2>
+      <div className='comment' style={{textAlign: 'center', display: 'block'}}>
+        <span>(w/ White Rice)</span>
+        </div>
           {OCS && OCS.items.map(item => (
             <div key={item.name} className="menu-item"> {/* Key change: wrapping div */}
               <div className="item-name-price"> {/* New div for name and price */}
-                <span className="item-name">{item.id} {item.name}</span>
-                <span className="item-price">{item.price}</span>
+                <span className={`item-name ${item.spicy ? 'spicy-text' : ''}`}>{item.id} {item.name}</span>
+                <span className={`item-price ${item.spicy ? 'spicy-text' : ''}`}>{item.price}</span>
               </div>
               {item.desc && <div className="desc">{item.desc}</div>} {/* Conditional rendering */}
             </div>

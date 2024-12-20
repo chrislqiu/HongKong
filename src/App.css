@@ -195,13 +195,5 @@
   margin: 0 auto; /* Centers the image horizontally */
 }
 
-.dinner-menu {
-  
-}
 
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%;
-}
+

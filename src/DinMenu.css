@@ -7,7 +7,7 @@
     background-color: transparent;
   }
 .col2 {
-    margin-top: -747px;
+    margin-top: -791px;
     margin-left: 265px;
     display: block;
     padding: 0px;
@@ -19,7 +19,7 @@
 
 .col3 {
 background-color: transparent;
-margin-top: -819px;
+margin-top: -843px;
 margin-left: 265px;
     display: block;
     padding: 0px;
@@ -30,7 +30,7 @@ margin-left: 265px;
 
 .col4 {
     background-color:transparent;
-    margin-top: -782px;
+    margin-top: -809px;
     margin-left: 525px;
     display: block;
     padding: 0px;
@@ -40,6 +40,7 @@ margin-left: 265px;
 }  
     h2 {
     text-align: center;
+    margin-bottom: 2px;
   }
   
    p {
@@ -77,6 +78,12 @@ margin-left: 265px;
     font-style: italic;
   }
 
-  .spicy {
+  .spicy-text {
+    color: red;
+  }
+
+  .comment {
+    text-align: right;
+    font-size: 8px;
     color: red;
   }
