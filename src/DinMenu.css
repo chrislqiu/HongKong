@@ -1,53 +1,82 @@
-.menu-container {
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap to the next line if needed */
-    gap: 10px; /* Adds space between items */
+.col1 {
+    display: block;
+    padding: 0px;
+    font-family: 'Caviar';
+    font-size: 10px;
+    width: 250px;
+    background-color: transparent;
+  }
+.col2 {
+    margin-top: -747px;
+    margin-left: 265px;
+    display: block;
+    padding: 0px;
+    font-family: 'Caviar';
+    font-size: 10px;
+    width: 250px;
+    background-color: transparent;
+}
+
+.col3 {
+background-color: transparent;
+margin-top: -819px;
+margin-left: 265px;
+    display: block;
+    padding: 0px;
+    font-family: 'Caviar';
+    font-size: 10px;
+    width: 250px;
+}
+
+.col4 {
+    background-color:transparent;
+    margin-top: -782px;
+    margin-left: 525px;
+    display: block;
+    padding: 0px;
+    font-family: 'Caviar';
+    font-size: 10px;
+    width: 250px;
+}  
+    h2 {
+    text-align: center;
   }
   
-  .menu-category {
-    display: flex;
-    flex-direction: column;
-    width: 150px; /* Smaller category width */
-    margin-right: 10px; /* Adds space between categories */
+   p {
+    margin: 5px 0;
+    text-align: left;
+    line-height: 8px;
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space out the name and price */
+  }
+
+
+  .menu-item { /* Styles for the wrapper div */
+    margin-bottom: 15px; /* Add spacing between menu items */
   }
   
-  .category-title {
-    font-size: 14px; /* Smaller font size */
-    font-family: 'Caviar', sans-serif;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .menu-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 0; /* Smaller padding */
-    font-size: 12px; /* Smaller font size */
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .item-name {
-    font-family: 'Caviar', sans-serif;
-    color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 80%; /* Ensures item name takes up most space */
+  .item-name-price {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2px; /* Space between name/price and description */
+      text-align: left;
   }
   
   .item-price {
-    font-family: 'Caviar', sans-serif;
-    color: #333;
-    font-weight: bold;
-    font-size: 12px;
     text-align: right;
-    width: 20%; /* Ensures price takes up remaining space */
+    margin-left: 3px;
+    letter-spacing: .1px;
   }
   
+  .desc {
+    /* Removed display: block; it's block by default */
+    margin-top: 3px; /* Consistent spacing */
+    word-wrap: break-word;
+    font-size: 8px;
+    text-align: left;
+    font-style: italic;
+  }
+
+  .spicy {
+    color: red;
+  }

@@ -77,15 +77,15 @@
 .left-box {
   flex: 1;
   background-color: transparent;
-  padding: 20px;
+  padding: 0px;
   margin: 20px;
   border-radius: 8px;
 }
 
 .right-menu {
   flex: 3;
-  padding: 20px;
-  margin: 20px; /* Top, Right, Bottom, Left */
+  padding: 0px;
+  margin: 10px; /* Top, Right, Bottom, Left */
   margin-left: 0px;
   border-radius: 8px;
   background-color: transparent;
@@ -196,7 +196,7 @@
 }
 
 .dinner-menu {
-  margin-top: 100px; /* Adjust this value for the desired vertical offset */
+  
 }
 
 body, html {

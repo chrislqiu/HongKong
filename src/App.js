@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import FAQ from './Faq';
 import logo from './logo.png'
-import M1e from './M1e.png'
 import M2 from './M2.png'
 import DinMenu from './DinMenu';
 
