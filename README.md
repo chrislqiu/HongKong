@@ -1,5 +1,5 @@
 # HongKong
-Website for family-owned restaurant.
+Website for family-owned restaurant
 ## Future Plans
 * Type in lunch menu, formatting for lunch is kinda cooked
 ## Known Issues (Kinda)
