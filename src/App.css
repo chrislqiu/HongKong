@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'CaviarB';
+  src: url('./Caviar-Dreams/Caviar_Dreams_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Baratheon';
   src: url('./baratheon-font/Baratheon-9Y1Z5.otf') format('opentype');
   font-weight: normal;
@@ -27,7 +34,7 @@
 
 /* Align the toolbar to the right */
 .toolbar {
-  width: 13%;
+  width: 20%;
   height: 50px;
   background-color: transparent;
   color: black;

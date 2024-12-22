@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'; // Import necessary components
 import FAQ from './Faq';
-import logo from './logo.png'
+import LunMenu from './LunMenu';
 import DinMenu from './DinMenu';
-import LunMenu from './LunMenu'
+import AboutUs from './AboutUs';
+import logo from './logo.png';
+import './App.css';
 
 function App() {
   const [selected, setSelected] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const faqData = [
     { question: "What is the difference between the chow mein, lo mein, and chow mei fun?", answer: "The chow mein is a vegetable dish, the lo mein is soft noodles with brown sauce, and the chow mei fun is the thin rice noodles." },
     { question: "What is the difference between the large and combination sizes?", answer: "Large sizes comes with more entree than the combination and a small side of white rice. The combination is half pork fried rice, half entree, and comes with a side of eggroll." },
@@ -18,84 +23,94 @@ function App() {
   ];
 
   useEffect(() => {
-    // Get the current hour and minute
-    const currentDate = new Date();
-    const currentHour = currentDate.getHours();
-    const currentMinute = currentDate.getMinutes();
+    if (location.pathname !== '/about-us') {
+      const currentDate = new Date();
+      const currentHour = currentDate.getHours();
+      const currentMinute = currentDate.getMinutes();
+      const currentDecimalTime = currentHour + currentMinute / 60;
 
-    // Convert current time to decimal format (e.g., 10:30 AM becomes 10.5)
-    const currentDecimalTime = currentHour + currentMinute / 60;
-
-    // Set the default selection based on time of day in decimal format
-    if (currentDecimalTime >= 10.5 && currentDecimalTime < 15) {
-      setSelected('Lunch'); // If it's between 10:30 AM and 3:00 PM, default to "Lunch"
+      const newSelection = currentDecimalTime >= 10.5 && currentDecimalTime < 15 ? 'Lunch' : 'Dinner';
+      setSelected(newSelection);
     } else {
-      setSelected('Dinner'); // Otherwise, default to "Dinner"
+      setSelected(null);
     }
-  }, []); // Empty dependency array ensures this runs once on component mount
+  }, [location]);
 
   const handleSelect = (selection) => {
-    setSelected(selection);
+    if (selected !== selection) { // Only update if selection is different
+      setSelected(selection);
+    }
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="toolbar">
-          <button
-            className={`toolbar-button ${selected === 'Lunch' ? 'selected' : ''}`}
-            onClick={() => handleSelect('Lunch')}
-          >
-            Lunch
-          </button>
-          <button
-            className={`toolbar-button ${selected === 'Dinner' ? 'selected' : ''}`}
-            onClick={() => handleSelect('Dinner')}
-          >
-            Dinner
-          </button>
-        </div>
-        <div className="content">
-          <div className="left-box">
-            <div className='name'>
-              <span className='nl1'>Hong</span>
-              <span className='nl2'>Kong</span>
-            </div>
-            <img src={logo} alt="Logo" className="logo" />
-            <div className='addr'>
-              <span className='al1'>1523 E. Markland Ave</span>
-              <span className='al2'>Kokomo, IN 46901</span>
-            </div>
-            <div className='phone'>
-              <span className='num1'>765-457-1919</span>
-              <span className='num2'>765-457-1188</span>
-            </div>
-            <div className='hours'>
-              <span className='hrtxt'>Hours</span>
-              <span className='days'>Sunday: 11:30am - 9:30pm</span>
-              <span className='days'>Monday: Closed</span>
-              <span className='days'>Tuesday: 10:30am - 9:30pm</span>
-              <span className='days'>Wednesday: 10:30am - 9:30pm</span>
-              <span className='days'>Thursday: 10:30am - 9:30pm</span>
-              <span className='days'>Friday: 10:30am - 9:30pm</span>
-              <span className='days'>Saturday: 10:30am - 9:30pm</span>
-            </div>
+        {location.pathname === '/about-us' ? ( // Conditional toolbar rendering
+          <div className="toolbar about-toolbar"> {/* About Us toolbar */}
+            <button className="toolbar-button" onClick={() => navigate('/')}>
+              Home
+            </button>
           </div>
-          <div className="right-menu">
-            <div className={`selected-menu ${selected ? 'show' : ''}`}>
-              {selected === 'Lunch' ? (
-                <div>
-                  <LunMenu/>
-                </div>
-              ) : (
-                <div>
-                  <DinMenu/>
-                </div>
-              )}
-            </div>
+        ) : (
+          <div className="toolbar"> {/* Main toolbar */}
+            <button className="toolbar-button" onClick={() => navigate('/about-us')}>
+              About Us
+            </button>
+            <button
+              className={`toolbar-button ${selected === 'Lunch' ? 'selected' : ''}`}
+              onClick={() => handleSelect('Lunch')}
+            >
+              Lunch
+            </button>
+            <button
+              className={`toolbar-button ${selected === 'Dinner' ? 'selected' : ''}`}
+              onClick={() => handleSelect('Dinner')}
+            >
+              Dinner
+            </button>
           </div>
-        </div>
-        <FAQ data={faqData} />
+        )}
+
+        <Routes>
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/" element={
+            <> {/* Fragment to wrap multiple elements */}
+              <div className="content">
+                <div className="left-box">
+                  <div className='name'>
+                    <span className='nl1'>Hong</span>
+                    <span className='nl2'>Kong</span>
+                  </div>
+                  <img src={logo} alt="Logo" className="logo" />
+                  <div className='addr'>
+                    <span className='al1'>1523 E. Markland Ave</span>
+                    <span className='al2'>Kokomo, IN 46901</span>
+                  </div>
+                  <div className='phone'>
+                    <span className='num1'>765-457-1919</span>
+                    <span className='num2'>765-457-1188</span>
+                  </div>
+                  <div className='hours'>
+                    <span className='hrtxt'>Hours</span>
+                    <span className='days'>Sunday: 11:30am - 9:30pm</span>
+                    <span className='days'>Monday: Closed</span>
+                    <span className='days'>Tuesday: 10:30am - 9:30pm</span>
+                    <span className='days'>Wednesday: 10:30am - 9:30pm</span>
+                    <span className='days'>Thursday: 10:30am - 9:30pm</span>
+                    <span className='days'>Friday: 10:30am - 9:30pm</span>
+                    <span className='days'>Saturday: 10:30am - 9:30pm</span>
+                  </div>
+                </div>
+                <div className="right-menu">
+                  <div className={`selected-menu ${selected ? 'show' : ''}`}>
+                    {selected === 'Lunch' ? <LunMenu /> : <DinMenu />}
+                  </div>
+                </div>
+              </div>
+              <FAQ data={faqData} />
+            </>
+          } />
+        </Routes>
       </header>
     </div>
   );
