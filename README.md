@@ -5,6 +5,6 @@ Website for family-owned restaurant
 <img width="1400" alt="Screenshot 2024-12-20 at 6 32 08 PM" src="https://github.com/user-attachments/assets/f47f8e7d-48f5-4397-b857-39f4c7d9b619" />
 
 ## Future Plans
-* Add an "About Us" section
+* Maybe change the timeline itself, looks a little too thick
 ## Known Issues (Kinda)
 * Formatting on mobile looks a little silly...but is fully functional
