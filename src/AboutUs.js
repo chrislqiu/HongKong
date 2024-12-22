@@ -20,7 +20,7 @@ const AboutUs = () => {
                 Also don't forget, Brandon will always be better.
             </div>
             <div className='timeline'>
-                <img className='tl'src={time}></img>
+                <img className='tl'src={time} alt='timeline'></img>
             </div>
         </div>
     );
