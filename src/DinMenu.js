@@ -418,7 +418,7 @@ const DinMenu = () => {
                     <div className='meinfun'>
                         <h2>Mei Fun</h2>
                         <div className='comment' style={{ textAlign: 'center' }}>
-                            <span>(Think Noodle, No Rice)</span>
+                            <span>(Thin Noodle, No Rice)</span>
                         </div>
                         {MF && MF.items.map(item => (
                             <p key={item.name}>
